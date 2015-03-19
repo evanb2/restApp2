@@ -1,3 +1,10 @@
+<html>
+    <head>
+        <title>Edit your the name of a cuisine type</title>
+        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'>
+    </head>
+    <body>
+    <div class="container">
 <h1>Update the {{ cuisines.getName }} cuisine</h1>
 
 <form action='/cuisines/{{ cuisines.getId }}' method='post'>
@@ -12,5 +19,8 @@
 <form action='/cuisines/{{ cuisines.getId }}' method='post'>
     <input name='_method' type='hidden' value='delete'>
 
-    <button type='submit'>Delete this Cuisine</button>
+    <button type='submit' class="btn btn-info">Delete this Cuisine </button>
 </form>
+</div>
+</body>
+</html>

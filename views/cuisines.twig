@@ -1,8 +1,10 @@
 <html>
     <head>
         <title>Restaurant Finder</title>
+        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'>
     </head>
     <body>
+        <div class="container">
         <h1>{{ cuisines.getName }}</h1>
 
         {% if cuisines is not empty %}
@@ -21,9 +23,10 @@
             <button type='submit'>Add Cuisine</button>
         </form>
         <form action='/delete_cuisines' method='post'>
-            <button type='submit'>Clear</button>
+            <button type='submit' class="btn btn-info">Clear</button>
         </form>
 
         <p><a href='/'>Home</a></p>
+    </div>
     </body>
 </html>
