@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Restaurant Finder</title>
+    </head>
+    <body>
+        <h1>{{ cuisines.getName }}</h1>
+
+        {% if restaurants is not empty %}
+            <p>Here are all the Restaurants:</p>
+            <ul>
+                {% for restaurant in restaurants %}
+                    <li>{{ restaurant.getName }}</li>
+                    <li>{{ restaurant.getDescription }}</li>
+                    <li>{{ restaurant.getAddress }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+        <h4>Add a Restaurant</h4>
+
+        <form action='/restaurants' method='post'>
+            <p>
+            <input id='cuisine_id' name='cuisine_id' type='hidden' value='{{ cuisines.getId() }}'>
+            <label for='name'>Restaurant Name:</label>
+            <input id='name' name='name' type='text'>
+            </p>
+
+            <p>
+            <label for='description'>Restaurant Description:</label>
+            <input id='description' name='description' type='text'>
+            </p>
+
+            <p>
+            <label for='address'>Restaurant Address:</label>
+            <input id='address' name='address' type='text'>
+            </p>
+
+            <button type="submit">Add Restaurant</button>
+        </form>
+        <p><a href='/cuisines/{{ cuisines.getId }}/edit'>Edit this Cuisine</a></p>
+        <p><a href='/'>Home</a></p>
+
+    </body>
+</html>

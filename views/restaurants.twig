@@ -8,7 +8,9 @@
             <p>Here are all your restaurants:</p>
             <ul>
                 {% for restaurant in restaurants %}
-                    <li>{{ restaurants.getDescription }}</li>
+                    <li>{{ restaurant.getName }}</li>
+                    <li>{{ restaurant.getAddress }}</li>
+                    <li>{{ restaurant.getDescription }}</li>
                 {% endfor %}
             </ul>
         {% endif %}
@@ -29,6 +31,6 @@
             <button type='submit'>Delete Restaurant</button>
         </form>
 
-        <p><a href='/'>Home</a></p>      
+        <p><a href='/'>Home</a></p>
     </body>
 </html>
