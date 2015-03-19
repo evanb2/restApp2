@@ -37,7 +37,7 @@
             $this->description = (string) $new_description;
         }
 
-        function setCusineId($new_cuisine_id)
+        function setCusine_id($new_cuisine_id)
         {
             $this->cuisine_id = (int) $new_cuisine_id;
         }
